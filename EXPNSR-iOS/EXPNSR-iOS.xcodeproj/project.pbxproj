@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6311D6E25714A1A00A6675D /* NewEntryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6311D6D25714A1A00A6675D /* NewEntryCoordinator.swift */; };
+		A6311D7325714FE300A6675D /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6311D7225714FE300A6675D /* UITabBarController+Extension.swift */; };
 		A6A3B50B2570C2900034C856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B50A2570C2900034C856 /* AppDelegate.swift */; };
 		A6A3B50F2570C2900034C856 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B50E2570C2900034C856 /* TabBarCoordinator.swift */; };
 		A6A3B5142570C2940034C856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A3B5132570C2940034C856 /* Assets.xcassets */; };
@@ -28,7 +30,6 @@
 		A6A3B6EC2570F7EF0034C856 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B6EB2570F7EF0034C856 /* ProfileViewModel.swift */; };
 		A6A3B6F22570F8930034C856 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B6F12570F8930034C856 /* BindableType.swift */; };
 		A6A3B6F7257100560034C856 /* UIColor+Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B6F6257100560034C856 /* UIColor+Name+Extension.swift */; };
-		A6A3B6FE25710F270034C856 /* NewEntryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B6FD25710F270034C856 /* NewEntryButtonView.swift */; };
 		A713F9E72ACA1F998AB635E3 /* Pods_EXPNSR_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394446927BB9DDB0798DF729 /* Pods_EXPNSR_iOSTests.framework */; };
 		B18FE47F7A5E37DA0F4167D9 /* Pods_EXPNSR_iOS_EXPNSR_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBE5EDACC940FD0B673C5B0 /* Pods_EXPNSR_iOS_EXPNSR_iOSUITests.framework */; };
 		BA0FD9B046DB4DABF190043A /* Pods_EXPNSR_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673B81B6B10EE5D2C1E74135 /* Pods_EXPNSR_iOS.framework */; };
@@ -61,6 +62,8 @@
 		6AAE8C825BDCC9126BF2769C /* Pods-EXPNSR-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXPNSR-iOS.release.xcconfig"; path = "Target Support Files/Pods-EXPNSR-iOS/Pods-EXPNSR-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		7466A6F01BDDCF30F64CA714 /* Pods-EXPNSR-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXPNSR-iOS.debug.xcconfig"; path = "Target Support Files/Pods-EXPNSR-iOS/Pods-EXPNSR-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7DD3445E93969FBACA06300B /* Pods-EXPNSR-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EXPNSR-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-EXPNSR-iOSTests/Pods-EXPNSR-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6311D6D25714A1A00A6675D /* NewEntryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryCoordinator.swift; sourceTree = "<group>"; };
+		A6311D7225714FE300A6675D /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
 		A6A3B5072570C2900034C856 /* EXPNSR-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPNSR-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A3B50A2570C2900034C856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A3B50E2570C2900034C856 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		A6A3B6EB2570F7EF0034C856 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A6A3B6F12570F8930034C856 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		A6A3B6F6257100560034C856 /* UIColor+Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Name+Extension.swift"; sourceTree = "<group>"; };
-		A6A3B6FD25710F270034C856 /* NewEntryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			children = (
 				A6A3B6C72570E6290034C856 /* UIImage+Name+Extension.swift */,
 				A6A3B6F6257100560034C856 /* UIColor+Name+Extension.swift */,
+				A6311D7225714FE300A6675D /* UITabBarController+Extension.swift */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			children = (
 				A6A3B6DC2570F7C60034C856 /* NewEntryViewController.swift */,
 				A6A3B6E12570F7D40034C856 /* NewEntryViewModel.swift */,
+				A6311D6D25714A1A00A6675D /* NewEntryCoordinator.swift */,
 			);
 			path = NewEntryViewController;
 			sourceTree = "<group>";
@@ -307,7 +311,6 @@
 		A6A3B6FC25710ED70034C856 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				A6A3B6FD25710F270034C856 /* NewEntryButtonView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -603,15 +606,16 @@
 				A6A3B50F2570C2900034C856 /* TabBarCoordinator.swift in Sources */,
 				A6A3B6E72570F7E00034C856 /* ProfileViewController.swift in Sources */,
 				A6A3B5BF2570CD570034C856 /* ModalPresentationRouter.swift in Sources */,
+				A6311D7325714FE300A6675D /* UITabBarController+Extension.swift in Sources */,
 				A6A3B6E22570F7D40034C856 /* NewEntryViewModel.swift in Sources */,
 				A6A3B6C82570E6290034C856 /* UIImage+Name+Extension.swift in Sources */,
 				A6A3B6D32570F7960034C856 /* HomeViewController.swift in Sources */,
 				A6A3B6EC2570F7EF0034C856 /* ProfileViewModel.swift in Sources */,
-				A6A3B6FE25710F270034C856 /* NewEntryButtonView.swift in Sources */,
 				A6A3B5AB2570CCAB0034C856 /* Router.swift in Sources */,
 				A6A3B5B52570CCE90034C856 /* NavigationRouter.swift in Sources */,
 				A6A3B50B2570C2900034C856 /* AppDelegate.swift in Sources */,
 				A6A3B6DD2570F7C60034C856 /* NewEntryViewController.swift in Sources */,
+				A6311D6E25714A1A00A6675D /* NewEntryCoordinator.swift in Sources */,
 				A6A3B5BA2570CD1E0034C856 /* AppDelegateRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

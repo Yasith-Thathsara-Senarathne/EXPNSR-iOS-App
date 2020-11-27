@@ -14,15 +14,18 @@ import Action
 class TabBarViewController: UITabBarController {
     
     // Class properties
-    private let newEntryButtonView = NewEntryButtonView().chain.component
+    private let newEntryButton = UIButton().chain.bgColor(.newEntryButtonBackground).clipToBounds(true).cornerRadius(35).border(.newEntryButtonBorder, 0.5).setImage(.tabBarNewEntry).component
     
+    // Actions
     var didSelectTab: Action<UIViewController, Void>!
+    var didTapNewEntryButton: Action<Int, Void>!
     
     func prepareTabs(_ viewControllers: [UIViewController]) {
         viewControllers.enumerated().forEach {
             switch $0.offset {
             case 0:
                 $0.element.tabBarItem = .init(title: "", image: .tabBarHome, tag: $0.offset)
+                $0.element.tabBarItem.tag = $0.offset
                 
             case 1:
                 $0.element.tabBarItem = .init(title: "", image: UIImage(), tag: $0.offset)
@@ -30,6 +33,7 @@ class TabBarViewController: UITabBarController {
                 
             case 2:
                 $0.element.tabBarItem = .init(title: "", image: .tabBarProfile, tag: $0.offset)
+                $0.element.tabBarItem.tag = $0.offset
                 
             default:
                 break
@@ -41,6 +45,15 @@ class TabBarViewController: UITabBarController {
     func bind() {
         rx.didSelect
             .bind(to: didSelectTab.inputs)
+            .disposed(by: rx.disposeBag)
+        
+        newEntryButton.rx.tap
+            .map { self.tabBar.selectedItem?.tag ?? 0 }
+            .subscribe(onNext: { [weak self] selectedTab in
+                self?.setTabBarHidden(true, animated: true, completion: {
+                    self?.didTapNewEntryButton.execute(selectedTab)
+                })
+            })
             .disposed(by: rx.disposeBag)
     }
     
@@ -54,8 +67,8 @@ class TabBarViewController: UITabBarController {
     }
     
     func setupMiddleButton() {
-        newEntryButtonView.frame = CGRect(x: (view.bounds.width / 2)-35, y: -25, width: 70, height: 70)
-        tabBar.addSubview(newEntryButtonView)
+        newEntryButton.frame = CGRect(x: (view.bounds.width / 2)-35, y: -25, width: 70, height: 70)
+        tabBar.addSubview(newEntryButton)
         view.layoutIfNeeded()
     }
 }

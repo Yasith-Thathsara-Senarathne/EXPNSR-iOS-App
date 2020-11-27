@@ -33,6 +33,7 @@ class NewEntryViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNavigationBarBackground(hidden: true)
+        self.tabBarController?.tabBar.isHidden = true
     }
 }
 

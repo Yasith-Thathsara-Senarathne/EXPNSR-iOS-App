@@ -28,6 +28,7 @@ class TabBarCoordinator: Coordinator {
         //Root tab bar
         let rootViewController = TabBarViewController()
         rootViewController.didSelectTab = didSelectTab
+        rootViewController.didTapNewEntryButton = didTapNewEntryButton
         rootViewController.bind()
         
         //Home view controller
@@ -55,6 +56,25 @@ class TabBarCoordinator: Coordinator {
         self?.doBind(of: rootViewController)
         return .empty()
     }
+    
+    private lazy var didTapNewEntryButton: Action<Int, Void> = Action { [weak self] in
+        if $0 == 0 {
+            guard let _router = self?.homeRouter,
+                  let navController = _router.navigationController,
+                  let rootViewController = navController.viewControllers.first
+            else { return .empty() }
+            
+            self?.showNewEntryVC(of: rootViewController)
+        } else if $0 == 2 {
+            guard let _router = self?.profileRouter,
+                  let navController = _router.navigationController,
+                  let rootViewController = navController.viewControllers.first
+            else { return .empty() }
+            
+            self?.showNewEntryVC(of: rootViewController)
+        }
+        return .empty()
+    }
 }
 
 //MARK:- Perform bind on initial tab tapping
@@ -69,6 +89,12 @@ extension TabBarCoordinator {
         default:
             break
         }
+    }
+    
+    private func showNewEntryVC(of viewController: UIViewController) {
+        let router = ModalPresentationRouter.init(viewController, presentation: .overCurrentContext, withTransition: .crossDissolve)
+        let child = NewEntryCoordinator.init(router)
+        child.coordinateChild(child, animated: true)
     }
 }
 
