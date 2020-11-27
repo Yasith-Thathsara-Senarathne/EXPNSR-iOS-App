@@ -1,0 +1,46 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'EXPNSR-iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EXPNSR-iOS
+
+  #Rx Pods
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RealmSwift'
+  pod 'RxRealm'
+  pod 'RxDataSources', '~> 4'
+  pod 'Action', '~> 4'
+  pod 'NSObject+Rx'
+  pod 'Moya/RxSwift', '~> 14.0'
+  pod "RxGesture", '~> 3'
+  pod 'RxSwiftExt', '~> 5'
+  #pod 'RxGoogleMaps'
+  #pod 'RxCoreLocation', '~> 1.4'
+  
+  #MNk Pods
+  pod 'MNkSupportUtilities', '~> 1.8'
+  
+  #OTHER Pods
+  pod 'IQKeyboardManagerSwift'
+  
+  #Auth
+  pod 'RxFirebase/Auth'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+  
+  pod 'RxFirebase/Storage'
+
+  target 'EXPNSR-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'EXPNSR-iOSUITests' do
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,6 @@
+framework module Pods_EXPNSR_iOS_EXPNSR_iOSUITests {
+  umbrella header "Pods-EXPNSR-iOS-EXPNSR-iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

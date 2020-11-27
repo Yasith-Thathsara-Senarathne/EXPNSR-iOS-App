@@ -1,0 +1,6 @@
+framework module Pods_EXPNSR_iOS {
+  umbrella header "Pods-EXPNSR-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

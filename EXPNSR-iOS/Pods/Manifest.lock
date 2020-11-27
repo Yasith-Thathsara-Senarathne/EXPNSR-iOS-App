@@ -1,0 +1,223 @@
+PODS:
+  - Action (4.2.0):
+    - RxCocoa (< 7.0, >= 5.0)
+    - RxSwift (< 7.0, >= 5.0)
+  - Alamofire (5.4.0)
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - Differentiator (4.0.1)
+  - FBSDKCoreKit (8.2.0):
+    - FBSDKCoreKit/Basics (= 8.2.0)
+    - FBSDKCoreKit/Core (= 8.2.0)
+  - FBSDKCoreKit/Basics (8.2.0)
+  - FBSDKCoreKit/Core (8.2.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (8.2.0):
+    - FBSDKLoginKit/Login (= 8.2.0)
+  - FBSDKLoginKit/Login (8.2.0):
+    - FBSDKCoreKit (~> 8.2.0)
+  - FirebaseAuth (6.9.2):
+    - FirebaseCore (~> 6.10)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (6.10.4):
+    - FirebaseCoreDiagnostics (~> 1.6)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+  - FirebaseCoreDiagnostics (1.7.0):
+    - GoogleDataTransport (~> 7.4)
+    - GoogleUtilities/Environment (~> 6.7)
+    - GoogleUtilities/Logger (~> 6.7)
+    - nanopb (~> 1.30906.0)
+  - FirebaseStorage (3.9.1):
+    - FirebaseCore (~> 6.10)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleDataTransport (7.5.1):
+    - nanopb (~> 1.30906.0)
+  - GoogleSignIn (5.0.2):
+    - AppAuth (~> 1.2)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleUtilities/AppDelegateSwizzler (6.7.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.7.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.7.2):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/Network (6.7.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.7.2)"
+  - GoogleUtilities/Reachability (6.7.2):
+    - GoogleUtilities/Logger
+  - GTMAppAuth (1.1.0):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher (~> 1.4)
+  - GTMSessionFetcher (1.5.0):
+    - GTMSessionFetcher/Full (= 1.5.0)
+  - GTMSessionFetcher/Core (1.5.0)
+  - GTMSessionFetcher/Full (1.5.0):
+    - GTMSessionFetcher/Core (= 1.5.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - MNkSupportUtilities (1.8):
+    - SDWebImage
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - PromisesObjC (1.2.11)
+  - Realm (5.5.0):
+    - Realm/Headers (= 5.5.0)
+  - Realm/Headers (5.5.0)
+  - RealmSwift (5.5.0):
+    - Realm (= 5.5.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxFirebase/Auth (0.3.8):
+    - RxFirebaseAuthentication (~> 0.3)
+  - RxFirebase/Storage (0.3.8):
+    - RxFirebaseStorage (~> 0.3)
+  - RxFirebaseAuthentication (0.3.8):
+    - FirebaseAuth (~> 6)
+    - FirebaseCore (~> 6)
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxFirebaseStorage (0.3.8):
+    - FirebaseStorage (~> 3)
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxRealm (3.1.0):
+    - RealmSwift (~> 5.2)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - SDWebImage (5.10.0):
+    - SDWebImage/Core (= 5.10.0)
+  - SDWebImage/Core (5.10.0)
+
+DEPENDENCIES:
+  - Action (~> 4)
+  - FBSDKLoginKit
+  - GoogleSignIn
+  - IQKeyboardManagerSwift
+  - MNkSupportUtilities (~> 1.8)
+  - Moya/RxSwift (~> 14.0)
+  - "NSObject+Rx"
+  - RealmSwift
+  - RxCocoa (~> 5)
+  - RxDataSources (~> 4)
+  - RxFirebase/Auth
+  - RxFirebase/Storage
+  - RxGesture (~> 3)
+  - RxRealm
+  - RxSwift (~> 5)
+  - RxSwiftExt (~> 5)
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - Alamofire
+    - AppAuth
+    - Differentiator
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseStorage
+    - GoogleDataTransport
+    - GoogleSignIn
+    - GoogleUtilities
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - MNkSupportUtilities
+    - Moya
+    - nanopb
+    - "NSObject+Rx"
+    - PromisesObjC
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxDataSources
+    - RxFirebase
+    - RxFirebaseAuthentication
+    - RxFirebaseStorage
+    - RxGesture
+    - RxRealm
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Action: 5dc2194f7a0b77857c82a677b0da655f197c005f
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FBSDKCoreKit: 4afd6ff53d8133a433dbcda44451c9498f8c6ce4
+  FBSDKLoginKit: 7181765f2524d7ebf82d9629066c8e6caafc99d0
+  FirebaseAuth: c92d49ada7948d1a23466e3db17bc4c2039dddc3
+  FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
+  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
+  FirebaseStorage: 15e0f15ef3c7fec3d1899d68623e47d4447066b4
+  GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
+  GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
+  GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
+  GTMAppAuth: 197a8dabfea5d665224aa00d17f164fc2248dab9
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  MNkSupportUtilities: 987091c958421328cdeb7b10b57fb531018cf1bf
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  Realm: fb399d76f44042e5cdfc630f33828fdb4d077345
+  RealmSwift: 3b7e62356207ef16d34de4e55d475163bd2062bb
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxFirebase: 45e6448c69c7212e21f8ba89144443f916437861
+  RxFirebaseAuthentication: 5d0573fd641947ed857346624d1c849bbd86bdff
+  RxFirebaseStorage: 271184ff8f8d3660bfc751dcafdbb4dd01d0b8a1
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxRealm: 50e5fe5c1f22518205afbb313fbc5580d73bc586
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
+
+PODFILE CHECKSUM: ad4f026face1c1c83972eb18327b8f5d1ce063c3
+
+COCOAPODS: 1.10.0
