@@ -10,13 +10,13 @@ import UIKit
 import RxSwift
 import Action
 
-public protocol Router:class{
-    func route(_ viewController: UIViewController, animated: Bool,_ dismissAction: CocoaAction?)
+public protocol Router: class {
+    func route(_ viewController: UIViewController, animated: Bool, _ dismissAction: CocoaAction?)
     func route(_ viewController: UIViewController, animated: Bool)
     func dismiss(animated: Bool)
 }
 
-extension Router{
+extension Router {
     public func route(_ viewController: UIViewController, animated: Bool) {
         route(viewController, animated: animated, nil)
     }

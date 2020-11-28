@@ -13,9 +13,9 @@ import RxDataSources
 import RealmSwift
 
 protocol NewEntryViewModelType {
-    
+    var didTapCloseButton: CocoaAction! { get }
 }
 
 struct NewEntryViewModel: NewEntryViewModelType {
-    
+    var didTapCloseButton: CocoaAction!
 }

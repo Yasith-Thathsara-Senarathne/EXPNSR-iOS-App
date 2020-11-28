@@ -50,9 +50,10 @@ class TabBarViewController: UITabBarController {
         newEntryButton.rx.tap
             .map { self.tabBar.selectedItem?.tag ?? 0 }
             .subscribe(onNext: { [weak self] selectedTab in
-                self?.setTabBarHidden(true, animated: true, completion: {
-                    self?.didTapNewEntryButton.execute(selectedTab)
-                })
+                self?.didTapNewEntryButton.execute(selectedTab)
+//                self?.setTabBarHidden(true, animated: true, completion: {
+//
+//                })
             })
             .disposed(by: rx.disposeBag)
     }

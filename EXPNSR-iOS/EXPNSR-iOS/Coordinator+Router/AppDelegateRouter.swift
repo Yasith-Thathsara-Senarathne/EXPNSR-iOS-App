@@ -12,7 +12,7 @@ import RxCocoa
 import NSObject_Rx
 import Action
 
-public class AppDelegateRouter:Router {
+public class AppDelegateRouter: Router {
     
     public weak var window:UIWindow!
     

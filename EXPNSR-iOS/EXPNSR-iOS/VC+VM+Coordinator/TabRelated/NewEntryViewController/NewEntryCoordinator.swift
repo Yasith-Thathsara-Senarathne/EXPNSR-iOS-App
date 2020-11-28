@@ -20,13 +20,14 @@ class NewEntryCoordinator: Coordinator {
     
     func coordinate(animated: Bool, _ action: CocoaAction?) {
         var viewController = NewEntryViewController()
-        let viewModel = NewEntryViewModel()
+        var viewModel = NewEntryViewModel()
+        viewModel.didTapCloseButton = didTapCloseButton
         
         viewController.bindViewModel(to: viewModel)
         router.route(viewController, animated: true)
     }
     
-    lazy var dismissVC: CocoaAction = CocoaAction { [weak self] in
+    lazy var didTapCloseButton: CocoaAction = CocoaAction { [weak self] in
         self?.router.dismiss(animated: true)
         return .empty()
     }

@@ -14,4 +14,6 @@ extension UIColor {
     class var tabBarTint: UIColor { UIColor.init(named: "tabBarTint")! }
     class var newEntryButtonBackground: UIColor { UIColor.init(named: "newEntryButtonBackground")! }
     class var newEntryButtonBorder: UIColor { UIColor.init(named: "newEntryButtonBorder")! }
+    class var largeBoldTitle: UIColor { UIColor.init(named: "largeBoldTitle")! }
+    class var closeButtonTint: UIColor { UIColor.init(named: "closeButtonTint")! }
 }
