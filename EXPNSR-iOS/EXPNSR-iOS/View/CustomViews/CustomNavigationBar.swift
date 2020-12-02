@@ -30,6 +30,6 @@ class CustomNavigationBar: MNkView {
         closeButton.activateLayouts([.centerY: 0])
         
         addSubview(mainSV)
-        mainSV.activateLayouts()
+        mainSV.activateLayouts([.leading: 16, .traling: -16, .centerY : 0])
     }
 }

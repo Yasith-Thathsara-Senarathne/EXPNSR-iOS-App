@@ -9,15 +9,31 @@ import Foundation
 import MNkSupportUtilities
 import RxSwift
 import Action
+import RxDataSources
 
 class NewEntryViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType {
     // Class properties
     var viewModel: NewEntryViewModel!
     
-    private let customNavigationBar = CustomNavigationBar().chain.bgColor(.clear).component
+    private let customNavigationBar = CustomNavigationBar().chain.bgColor(.viewBackground).component
+    
+    private var cellId: String {
+        return "NewEntryTVCell"
+    }
+    
+    private var customNavBarHeight: CGFloat {
+        return (safeAreaEdgeInsets.top + 20) + 40 + 20
+    }
+    
+    deinit {
+        print("deinit NewEntryViewController")
+    }
     
     override func config() {
         view.backgroundColor = .viewBackground
+        self.extendedLayoutIncludesOpaqueBars = true
+        
+        viewModel.setNewEntryCells()
     }
     
     override func createViews() {
@@ -27,32 +43,53 @@ class NewEntryViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType
         
         tableview.chain
             .dataSource(nil)
-            .contentInset(.init(top: safeAreaEdgeInsets.top + 20, left: 0, bottom: 0, right: 0))
+            .register(NewEntryTVCell.self, with: cellId)
+            .contentInset(UIEdgeInsets.init(top: customNavBarHeight, left: 0, bottom: 0, right: 0))
             .seperatorStyle(.none)
             .bgColor(.clear)
     }
     
     override func insertAndLayoutSubviews() {
+        super.insertAndLayoutSubviews()
         view.addSubview(customNavigationBar)
-        customNavigationBar.activateLayouts([.top: safeAreaEdgeInsets.top + 20, .leading: 16, .traling: -16, .height: 40])
+        customNavigationBar.activateLayouts([.top: 0, .leading: 0, .traling: 0, .height: customNavBarHeight])
     }
     
     func bindViewModel() {
         customNavigationBar.closeButton.rx.tap
             .bind(to: viewModel.didTapCloseButton.inputs)
             .disposed(by: rx.disposeBag)
+        
+        viewModel.newEntryCells
+            .bind(to: tableview.rx.items(dataSource: bindedDataSource))
+            .disposed(by: rx.disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNavigationBarBackground(hidden: true)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tabBarController?.setTabBarHidden(true, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
     }
 }
 
 //MARK:- Navigation bar transparent compatablity
 extension NewEntryViewController: NavigationBarTransparentCompitable {}
+
+
+extension NewEntryViewController {
+    private var bindedDataSource: RxTableViewSectionedReloadDataSource<NewEntryCellModel> {
+        let dataSource = RxTableViewSectionedReloadDataSource<NewEntryCellModel>(configureCell:{
+            _,
+            tableView,
+            indexPath,
+            element in
+            
+            switch element {
+            case .newEntry:
+                let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId, for: indexPath) as! NewEntryTVCell
+                return cell
+            }
+        })
+        return dataSource
+    }
+}

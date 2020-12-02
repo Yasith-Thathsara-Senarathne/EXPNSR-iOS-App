@@ -17,6 +17,8 @@
 		A6403DFF2572101800428ACB /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6403DFA2572101800428ACB /* Montserrat-Medium.ttf */; };
 		A6403E002572101800428ACB /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6403DFB2572101800428ACB /* Montserrat-SemiBold.ttf */; };
 		A6403E062572104D00428ACB /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6403E052572104D00428ACB /* AppFont.swift */; };
+		A6725EC925739C3600504017 /* DataEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6725EC825739C3600504017 /* DataEntryView.swift */; };
+		A6725ECF2573A22C00504017 /* NewEntryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */; };
 		A6A3B50B2570C2900034C856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B50A2570C2900034C856 /* AppDelegate.swift */; };
 		A6A3B50F2570C2900034C856 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B50E2570C2900034C856 /* TabBarCoordinator.swift */; };
 		A6A3B5142570C2940034C856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6A3B5132570C2940034C856 /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		A6403DFA2572101800428ACB /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		A6403DFB2572101800428ACB /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		A6403E052572104D00428ACB /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		A6725EC825739C3600504017 /* DataEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryView.swift; sourceTree = "<group>"; };
+		A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryTVCell.swift; sourceTree = "<group>"; };
 		A6A3B5072570C2900034C856 /* EXPNSR-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPNSR-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A3B50A2570C2900034C856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6A3B50E2570C2900034C856 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -176,6 +180,14 @@
 				A6403E052572104D00428ACB /* AppFont.swift */,
 			);
 			path = AppRelated;
+			sourceTree = "<group>";
+		};
+		A6725ECD2573A1F200504017 /* TVCell */ = {
+			isa = PBXGroup;
+			children = (
+				A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */,
+			);
+			path = TVCell;
 			sourceTree = "<group>";
 		};
 		A6A3B4FE2570C2900034C856 = {
@@ -350,6 +362,7 @@
 		A6A3B6FB25710ECA0034C856 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A6725ECD2573A1F200504017 /* TVCell */,
 				A6A3B6FC25710ED70034C856 /* CustomViews */,
 			);
 			path = View;
@@ -359,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				A6403DEA25720F0100428ACB /* CustomNavigationBar.swift */,
+				A6725EC825739C3600504017 /* DataEntryView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -656,6 +670,7 @@
 				A6A3B6D82570F7A40034C856 /* HomeViewModel.swift in Sources */,
 				A6A3B5B02570CCCF0034C856 /* Coordinator.swift in Sources */,
 				A6403E062572104D00428ACB /* AppFont.swift in Sources */,
+				A6725ECF2573A22C00504017 /* NewEntryTVCell.swift in Sources */,
 				A6403DEB25720F0100428ACB /* CustomNavigationBar.swift in Sources */,
 				A6A3B6F7257100560034C856 /* UIColor+Name+Extension.swift in Sources */,
 				A6403DF125720FA500428ACB /* UIFont+Name+Extension.swift in Sources */,
@@ -664,6 +679,7 @@
 				A6A3B5BF2570CD570034C856 /* ModalPresentationRouter.swift in Sources */,
 				A6311D7325714FE300A6675D /* UITabBarController+Extension.swift in Sources */,
 				A6A3B6E22570F7D40034C856 /* NewEntryViewModel.swift in Sources */,
+				A6725EC925739C3600504017 /* DataEntryView.swift in Sources */,
 				A6A3B6C82570E6290034C856 /* UIImage+Name+Extension.swift in Sources */,
 				A6A3B6D32570F7960034C856 /* HomeViewController.swift in Sources */,
 				A6A3B6EC2570F7EF0034C856 /* ProfileViewModel.swift in Sources */,

@@ -12,4 +12,12 @@ extension UIFont {
     class var largeBoldTitle: UIFont {
         return AppFont.font(with: .bold, size: 38)
     }
+    
+    class var dataEntryViewBoldTextField: UIFont {
+        return AppFont.font(with: .bold, size: 30)
+    }
+    
+    class var buttonBoldTitle: UIFont {
+        return AppFont.font(with: .bold, size: 25)
+    }
 }

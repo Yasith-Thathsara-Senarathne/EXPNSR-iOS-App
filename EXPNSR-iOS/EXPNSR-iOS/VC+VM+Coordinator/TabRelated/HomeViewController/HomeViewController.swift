@@ -20,6 +20,10 @@ class HomeViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType {
         return _tabBar.bounds.height + safeAreaEdgeInsets.bottom
     }
     
+    deinit {
+        print("deinit HomeViewController")
+    }
+    
     override func config() {
         view.backgroundColor = .viewBackground
         self.extendedLayoutIncludesOpaqueBars = true
