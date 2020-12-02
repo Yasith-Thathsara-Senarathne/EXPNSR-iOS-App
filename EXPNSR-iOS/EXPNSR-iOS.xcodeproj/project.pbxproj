@@ -17,6 +17,18 @@
 		A6403DFF2572101800428ACB /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6403DFA2572101800428ACB /* Montserrat-Medium.ttf */; };
 		A6403E002572101800428ACB /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6403DFB2572101800428ACB /* Montserrat-SemiBold.ttf */; };
 		A6403E062572104D00428ACB /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6403E052572104D00428ACB /* AppFont.swift */; };
+		A670A66125777B8200B1D163 /* NewEntryBaseTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A66025777B8200B1D163 /* NewEntryBaseTVCell.swift */; };
+		A670A66625777C0300B1D163 /* SubEntryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A66525777C0300B1D163 /* SubEntryTVCell.swift */; };
+		A670A66B257780D100B1D163 /* MonthSelectionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A66A257780D100B1D163 /* MonthSelectionTVCell.swift */; };
+		A670A670257780E700B1D163 /* TotalExpensesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A66F257780E700B1D163 /* TotalExpensesTVCell.swift */; };
+		A670A675257780FB00B1D163 /* HashCategoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A674257780FB00B1D163 /* HashCategoryTVCell.swift */; };
+		A670A67C257784B500B1D163 /* MonthSelectionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A67B257784B500B1D163 /* MonthSelectionCVCell.swift */; };
+		A670A6AE2577906100B1D163 /* Genaric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A6AD2577906100B1D163 /* Genaric.swift */; };
+		A670A6B52577988C00B1D163 /* MonthRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A6B42577988C00B1D163 /* MonthRealmModel.swift */; };
+		A670A6C725779AF800B1D163 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A6C625779AF800B1D163 /* RealmService.swift */; };
+		A670A6CC25779B3000B1D163 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A6CB25779B3000B1D163 /* AppError.swift */; };
+		A670A6D225779C6100B1D163 /* MonthRealmServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A6D125779C6100B1D163 /* MonthRealmServiceType.swift */; };
+		A670A6D725779C6F00B1D163 /* MonthRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670A6D625779C6F00B1D163 /* MonthRealmService.swift */; };
 		A6725EC925739C3600504017 /* DataEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6725EC825739C3600504017 /* DataEntryView.swift */; };
 		A6725ECF2573A22C00504017 /* NewEntryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */; };
 		A6A3B50B2570C2900034C856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A3B50A2570C2900034C856 /* AppDelegate.swift */; };
@@ -82,6 +94,18 @@
 		A6403DFA2572101800428ACB /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		A6403DFB2572101800428ACB /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		A6403E052572104D00428ACB /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		A670A66025777B8200B1D163 /* NewEntryBaseTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryBaseTVCell.swift; sourceTree = "<group>"; };
+		A670A66525777C0300B1D163 /* SubEntryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubEntryTVCell.swift; sourceTree = "<group>"; };
+		A670A66A257780D100B1D163 /* MonthSelectionTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectionTVCell.swift; sourceTree = "<group>"; };
+		A670A66F257780E700B1D163 /* TotalExpensesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalExpensesTVCell.swift; sourceTree = "<group>"; };
+		A670A674257780FB00B1D163 /* HashCategoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashCategoryTVCell.swift; sourceTree = "<group>"; };
+		A670A67B257784B500B1D163 /* MonthSelectionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectionCVCell.swift; sourceTree = "<group>"; };
+		A670A6AD2577906100B1D163 /* Genaric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genaric.swift; sourceTree = "<group>"; };
+		A670A6B42577988C00B1D163 /* MonthRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRealmModel.swift; sourceTree = "<group>"; };
+		A670A6C625779AF800B1D163 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		A670A6CB25779B3000B1D163 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		A670A6D125779C6100B1D163 /* MonthRealmServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRealmServiceType.swift; sourceTree = "<group>"; };
+		A670A6D625779C6F00B1D163 /* MonthRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthRealmService.swift; sourceTree = "<group>"; };
 		A6725EC825739C3600504017 /* DataEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryView.swift; sourceTree = "<group>"; };
 		A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryTVCell.swift; sourceTree = "<group>"; };
 		A6A3B5072570C2900034C856 /* EXPNSR-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPNSR-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,14 +202,79 @@
 			isa = PBXGroup;
 			children = (
 				A6403E052572104D00428ACB /* AppFont.swift */,
+				A670A6AD2577906100B1D163 /* Genaric.swift */,
+				A670A6CB25779B3000B1D163 /* AppError.swift */,
 			);
 			path = AppRelated;
+			sourceTree = "<group>";
+		};
+		A670A65F25777B4F00B1D163 /* NewEntryBaseTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				A670A66025777B8200B1D163 /* NewEntryBaseTVCell.swift */,
+				A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */,
+				A670A66525777C0300B1D163 /* SubEntryTVCell.swift */,
+			);
+			path = NewEntryBaseTVCell;
+			sourceTree = "<group>";
+		};
+		A670A6792577848A00B1D163 /* CVCell */ = {
+			isa = PBXGroup;
+			children = (
+				A670A67B257784B500B1D163 /* MonthSelectionCVCell.swift */,
+			);
+			path = CVCell;
+			sourceTree = "<group>";
+		};
+		A670A67A2577849A00B1D163 /* HomeTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				A670A66A257780D100B1D163 /* MonthSelectionTVCell.swift */,
+				A670A66F257780E700B1D163 /* TotalExpensesTVCell.swift */,
+				A670A674257780FB00B1D163 /* HashCategoryTVCell.swift */,
+			);
+			path = HomeTVCell;
+			sourceTree = "<group>";
+		};
+		A670A6B22577983E00B1D163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A670A6B32577984600B1D163 /* RealmModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A670A6B32577984600B1D163 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				A670A6B42577988C00B1D163 /* MonthRealmModel.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		A670A6C525779ADB00B1D163 /* RealmRelated */ = {
+			isa = PBXGroup;
+			children = (
+				A670A6D025779C5000B1D163 /* MonthRealmService */,
+				A670A6C625779AF800B1D163 /* RealmService.swift */,
+			);
+			path = RealmRelated;
+			sourceTree = "<group>";
+		};
+		A670A6D025779C5000B1D163 /* MonthRealmService */ = {
+			isa = PBXGroup;
+			children = (
+				A670A6D125779C6100B1D163 /* MonthRealmServiceType.swift */,
+				A670A6D625779C6F00B1D163 /* MonthRealmService.swift */,
+			);
+			path = MonthRealmService;
 			sourceTree = "<group>";
 		};
 		A6725ECD2573A1F200504017 /* TVCell */ = {
 			isa = PBXGroup;
 			children = (
-				A6725ECE2573A22C00504017 /* NewEntryTVCell.swift */,
+				A670A67A2577849A00B1D163 /* HomeTVCell */,
+				A670A65F25777B4F00B1D163 /* NewEntryBaseTVCell */,
 			);
 			path = TVCell;
 			sourceTree = "<group>";
@@ -215,6 +304,7 @@
 		A6A3B5092570C2900034C856 /* EXPNSR-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A670A6B22577983E00B1D163 /* Model */,
 				A6A3B6FB25710ECA0034C856 /* View */,
 				A6A3B6B12570E2460034C856 /* VC+VM+Coordinator */,
 				A6A3B57E2570C41C0034C856 /* Coordinator+Router */,
@@ -304,6 +394,7 @@
 		A6A3B6C52570E5F40034C856 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A670A6C525779ADB00B1D163 /* RealmRelated */,
 				A6403E042572103A00428ACB /* AppRelated */,
 				A6403DF525720FC400428ACB /* Resources */,
 				A6A3B6F02570F8690034C856 /* Protocols */,
@@ -362,6 +453,7 @@
 		A6A3B6FB25710ECA0034C856 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A670A6792577848A00B1D163 /* CVCell */,
 				A6725ECD2573A1F200504017 /* TVCell */,
 				A6A3B6FC25710ED70034C856 /* CustomViews */,
 			);
@@ -666,21 +758,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6A3B6F22570F8930034C856 /* BindableType.swift in Sources */,
+				A670A6C725779AF800B1D163 /* RealmService.swift in Sources */,
 				A6A3B6C12570E3AA0034C856 /* TabBarViewController.swift in Sources */,
+				A670A66B257780D100B1D163 /* MonthSelectionTVCell.swift in Sources */,
+				A670A6CC25779B3000B1D163 /* AppError.swift in Sources */,
 				A6A3B6D82570F7A40034C856 /* HomeViewModel.swift in Sources */,
 				A6A3B5B02570CCCF0034C856 /* Coordinator.swift in Sources */,
 				A6403E062572104D00428ACB /* AppFont.swift in Sources */,
 				A6725ECF2573A22C00504017 /* NewEntryTVCell.swift in Sources */,
 				A6403DEB25720F0100428ACB /* CustomNavigationBar.swift in Sources */,
 				A6A3B6F7257100560034C856 /* UIColor+Name+Extension.swift in Sources */,
+				A670A670257780E700B1D163 /* TotalExpensesTVCell.swift in Sources */,
 				A6403DF125720FA500428ACB /* UIFont+Name+Extension.swift in Sources */,
 				A6A3B50F2570C2900034C856 /* TabBarCoordinator.swift in Sources */,
+				A670A6B52577988C00B1D163 /* MonthRealmModel.swift in Sources */,
 				A6A3B6E72570F7E00034C856 /* ProfileViewController.swift in Sources */,
 				A6A3B5BF2570CD570034C856 /* ModalPresentationRouter.swift in Sources */,
 				A6311D7325714FE300A6675D /* UITabBarController+Extension.swift in Sources */,
+				A670A6AE2577906100B1D163 /* Genaric.swift in Sources */,
+				A670A66625777C0300B1D163 /* SubEntryTVCell.swift in Sources */,
 				A6A3B6E22570F7D40034C856 /* NewEntryViewModel.swift in Sources */,
 				A6725EC925739C3600504017 /* DataEntryView.swift in Sources */,
+				A670A6D225779C6100B1D163 /* MonthRealmServiceType.swift in Sources */,
+				A670A66125777B8200B1D163 /* NewEntryBaseTVCell.swift in Sources */,
+				A670A67C257784B500B1D163 /* MonthSelectionCVCell.swift in Sources */,
 				A6A3B6C82570E6290034C856 /* UIImage+Name+Extension.swift in Sources */,
+				A670A6D725779C6F00B1D163 /* MonthRealmService.swift in Sources */,
+				A670A675257780FB00B1D163 /* HashCategoryTVCell.swift in Sources */,
 				A6A3B6D32570F7960034C856 /* HomeViewController.swift in Sources */,
 				A6A3B6EC2570F7EF0034C856 /* ProfileViewModel.swift in Sources */,
 				A6A3B5AB2570CCAB0034C856 /* Router.swift in Sources */,

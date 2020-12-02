@@ -12,7 +12,7 @@ class DataEntryView: MNkView {
     private let containerView = UIView().chain.bgColor(.dataEntryViewBackground).cornerRadius(6).component
     private let mainSV = UIStackView().chain.hStack.spacing(4).component
     private let textField = UITextField().chain.bgColor(.clear).textAligment(.left).font(.dataEntryViewBoldTextField).textColor(.dataEntryViewtextFieldTextColor).component
-    private let currencyLabel = UILabel().chain.bgColor(.clear).textAlignment(.right).font(.dataEntryViewBoldTextField).textColor(.dataEntryViewCurrencyTextColor).text("LKR").component
+    private let currencyLabel = UILabel().chain.bgColor(.clear).textAlignment(.right).font(.dataEntryViewBoldTextField).textColor(.dataEntryViewCurrencyTextColor).text(Genaric().getCurrencyCodeForLocale().uppercased()).component
     
     var placeholderText: String = "" {
         didSet {

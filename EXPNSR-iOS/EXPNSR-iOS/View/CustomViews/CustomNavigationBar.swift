@@ -10,7 +10,7 @@ import MNkSupportUtilities
 
 class CustomNavigationBar: MNkView {
     private let titleLabel = UILabel().chain.font(.largeBoldTitle).textColor(.largeBoldTitle).textAlignment(.left).component
-    let closeButton = UIButton().chain.bgColor(.clear).clipToBounds(true).tintColor(.closeButtonTint).setImage(.close).imageEdgeInsets(.init(top: 10, left: 12, bottom: 10, right: 12)).component
+    let closeButton = UIButton().chain.bgColor(.clear).clipToBounds(true).tintColor(.closeButtonTint).setImage(.close).imageEdgeInsets(.init(top: 12, left: 12, bottom: 12, right: 12)).component
     private let mainSV = UIStackView().chain.hStack.spacing(4).distribution(.fill).component
     
     var titleText: String! {
