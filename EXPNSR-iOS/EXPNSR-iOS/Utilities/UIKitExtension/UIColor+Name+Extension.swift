@@ -21,4 +21,6 @@ extension UIColor {
     class var dataEntryViewCurrencyTextColor: UIColor { UIColor.init(named: "dataEntryViewCurrencyTextColor")! }
     class var doneButtonBackground: UIColor { UIColor.init(named: "doneButtonBackground")! }
     class var doneButtonTitile: UIColor { UIColor.init(named: "doneButtonTitile")! }
+    class var monthUnselectedTextColor: UIColor { UIColor.init(named: "monthUnselectedTextColor")! }
+    class var monthSelectedTextColor: UIColor { UIColor.init(named: "monthSelectedTextColor")! }
 }

@@ -20,4 +20,12 @@ extension UIFont {
     class var buttonBoldTitle: UIFont {
         return AppFont.font(with: .bold, size: 25)
     }
+    
+    class var monthSelectedTitle: UIFont {
+        return AppFont.font(with: .medium, size: 20)
+    }
+    
+    class var monthUnselectedTitle: UIFont {
+        return AppFont.font(with: .medium, size: 16)
+    }
 }

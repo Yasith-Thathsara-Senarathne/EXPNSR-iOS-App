@@ -46,10 +46,11 @@ class HomeViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType {
         view.backgroundColor = .viewBackground
         self.extendedLayoutIncludesOpaqueBars = true
         
+        let previousMonth: MonthModel = MonthModel(id: Genaric().getCurrentDateAndTime(type: .dateAsId, addMonths: -1), title: Genaric().getCurrentDateAndTime(type: .yearWithMonth, addMonths: -1))
         let currentMonth: MonthModel = MonthModel(id: Genaric().getCurrentDateAndTime(type: .dateAsId), title: Genaric().getCurrentDateAndTime(type: .yearWithMonth))
         let nextMonth: MonthModel = MonthModel(id: Genaric().getCurrentDateAndTime(type: .dateAsId, addMonths: 1), title: Genaric().getCurrentDateAndTime(type: .yearWithMonth, addMonths: 1))
         
-        viewModel.checkMonthsExists(for: currentMonth, nextMonth: nextMonth)
+        viewModel.checkMonthsExists(for: previousMonth, currentMonth: currentMonth, nextMonth: nextMonth)
     }
     
     override func createViews() {
@@ -62,7 +63,7 @@ class HomeViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType {
             .register(MonthSelectionTVCell.self, with: cellId.monthSelectionCellId.rawValue)
             .register(TotalExpensesTVCell.self, with: cellId.totalExpensesCellId.rawValue)
             .register(HashCategoryTVCell.self, with: cellId.hashCategoryCellId.rawValue)
-            .contentInset(UIEdgeInsets.init(top: customNavBarHeight, left: 0, bottom: tabBarHeight, right: 0))
+            .contentInset(UIEdgeInsets.init(top: 40, left: 0, bottom: 0, right: 0))
             .seperatorStyle(.none)
             .bgColor(.clear)
     }
@@ -86,11 +87,6 @@ class HomeViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType {
         setNavigationBarBackground(hidden: true)
         
         bindUI()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tabBarController?.setTabBarHidden(false, animated: true)
     }
     
     private func bindUI() {
@@ -117,8 +113,9 @@ extension HomeViewController {
             element in
             
             switch element {
-            case let .monthSelection(monthsList):
+            case let .monthSelection(data):
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellId.monthSelectionCellId.rawValue, for: indexPath) as! MonthSelectionTVCell
+                cell.data = data
                 return cell
             case .totalExpenses:
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellId.totalExpensesCellId.rawValue, for: indexPath) as! TotalExpensesTVCell

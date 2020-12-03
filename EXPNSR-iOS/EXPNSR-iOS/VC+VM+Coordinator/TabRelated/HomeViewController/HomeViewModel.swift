@@ -21,7 +21,7 @@ protocol HomeViewModelType {
     
     var cells: Observable<[HomeCellModel]>! { get }
     
-    func checkMonthsExists(for currentMonth: MonthModel, nextMonth: MonthModel)
+    func checkMonthsExists(for previousMonth: MonthModel, currentMonth: MonthModel, nextMonth: MonthModel)
     
     func updateUIWithNewData(with data: [MonthRealmModel])
 }
@@ -38,7 +38,17 @@ struct HomeViewModel: HomeViewModelType {
     
     private var realmService: MonthRealmServiceType = MonthRealmService()
     
-    func checkMonthsExists(for currentMonth: MonthModel, nextMonth: MonthModel) {
+    func checkMonthsExists(for previousMonth: MonthModel, currentMonth: MonthModel, nextMonth: MonthModel) {
+        if !realmService.objectExists(id: previousMonth.id) {
+            let monthRealmModel = MonthRealmModel()
+            monthRealmModel.id = previousMonth.id
+            monthRealmModel.title = previousMonth.title
+            monthRealmModel.monthlyExpense = 0.00
+            monthRealmModel.isSynced = false
+            
+            realmService.createMonthRealmData(with: monthRealmModel)
+        }
+        
         if !realmService.objectExists(id: currentMonth.id) {
             let monthRealmModel = MonthRealmModel()
             monthRealmModel.id = currentMonth.id
