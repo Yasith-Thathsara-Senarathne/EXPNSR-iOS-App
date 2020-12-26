@@ -89,6 +89,11 @@ class HomeViewController: MNkTVC_EmptyCellType<MNkEmptyTVCell>, BindableType {
         bindUI()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        dbReferenceDisposable?.disposed(by: rx.disposeBag)
+    }
+    
     private func bindUI() {
         let monthRealmDataShared = viewModel.monthRealmData.map { $0.toArray() }.share(replay: 1, scope: .whileConnected)
         
@@ -119,6 +124,7 @@ extension HomeViewController {
                 return cell
             case .totalExpenses:
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellId.totalExpensesCellId.rawValue, for: indexPath) as! TotalExpensesTVCell
+                cell.data = 2430000.00
                 return cell
             case .hashCategory:
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellId.hashCategoryCellId.rawValue, for: indexPath) as! HashCategoryTVCell

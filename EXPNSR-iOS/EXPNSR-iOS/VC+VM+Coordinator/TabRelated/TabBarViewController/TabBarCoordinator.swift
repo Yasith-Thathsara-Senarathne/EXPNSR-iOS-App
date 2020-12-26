@@ -57,21 +57,21 @@ class TabBarCoordinator: Coordinator {
         return .empty()
     }
     
-    private lazy var didTapNewEntryButton: Action<Int, Void> = Action { [weak self] in
-        if $0 == 0 {
+    private lazy var didTapNewEntryButton: Action<(Int, UITabBar), Void> = Action { [weak self] in
+        if $0.0 == 0 {
             guard let _router = self?.homeRouter,
                   let navController = _router.navigationController,
                   let rootViewController = navController.viewControllers.first
             else { return .empty() }
             
-            self?.showNewEntryVC(of: rootViewController)
-        } else if $0 == 2 {
+            self?.showNewEntryVC(of: rootViewController, tabBar: $0.1)
+        } else if $0.0 == 2 {
             guard let _router = self?.profileRouter,
                   let navController = _router.navigationController,
                   let rootViewController = navController.viewControllers.first
             else { return .empty() }
             
-            self?.showNewEntryVC(of: rootViewController)
+            self?.showNewEntryVC(of: rootViewController, tabBar: $0.1)
         }
         return .empty()
     }
@@ -91,10 +91,10 @@ extension TabBarCoordinator {
         }
     }
     
-    private func showNewEntryVC(of viewController: UIViewController) {
+    private func showNewEntryVC(of viewController: UIViewController, tabBar: UITabBar) {
         let router = ModalPresentationRouter.init(viewController, presentation: .overCurrentContext, withTransition: .crossDissolve)
-        let child = NewEntryCoordinator.init(router)
-        child.coordinateChild(child, animated: true)
+        let child = NewEntryCoordinator.init(router, tabBar)
+        coordinateChild(child, animated: true)
     }
 }
 

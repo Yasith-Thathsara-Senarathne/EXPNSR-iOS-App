@@ -18,7 +18,7 @@ class TabBarViewController: UITabBarController {
     
     // Actions
     var didSelectTab: Action<UIViewController, Void>!
-    var didTapNewEntryButton: Action<Int, Void>!
+    var didTapNewEntryButton: Action<(Int, UITabBar), Void>!
     
     func prepareTabs(_ viewControllers: [UIViewController]) {
         viewControllers.enumerated().forEach {
@@ -48,7 +48,7 @@ class TabBarViewController: UITabBarController {
             .disposed(by: rx.disposeBag)
         
         newEntryButton.rx.tap
-            .map { self.tabBar.selectedItem?.tag ?? 0 }
+            .map { (self.tabBar.selectedItem?.tag ?? 0, self.tabBar) }
             .subscribe(onNext: { [weak self] selectedTab in
                 guard let `self` = self else { return }
                 self.didTapNewEntryButton.execute(selectedTab)

@@ -43,7 +43,7 @@ class MonthSelectionTVCell: MNkTableViewCell {
     
     override func insertAndLayoutSubviews() {
         addSubview(collectionView)
-        collectionView.activateLayouts([.leading: 16, .traling: -16, .height: self.bounds.size.height])
+        collectionView.activateLayouts([.leading: 0, .traling: 0, .height: self.bounds.size.height])
     }
 }
 
@@ -54,6 +54,8 @@ extension MonthSelectionTVCell: UICollectionViewDelegateFlowLayout, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MonthSelectionCVCell
+        let currentMonth: MonthModel = MonthModel(id: Genaric().getCurrentDateAndTime(type: .dateAsId), title: Genaric().getCurrentDateAndTime(type: .yearWithMonth))
+        cell.isCellSelected = data[indexPath.item].id == currentMonth.id
         cell.data = data[indexPath.item]
         return cell
     }

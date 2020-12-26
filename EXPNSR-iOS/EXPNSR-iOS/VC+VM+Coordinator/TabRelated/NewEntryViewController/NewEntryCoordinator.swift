@@ -13,9 +13,11 @@ import Action
 class NewEntryCoordinator: Coordinator {
     var children: [Coordinator] = []
     var router: Router
+    var tabBar: UITabBar
     
-    init(_ router: Router) {
+    init(_ router: Router, _ tabBar: UITabBar) {
         self.router = router
+        self.tabBar = tabBar
     }
     
     func coordinate(animated: Bool, _ action: CocoaAction?) {
@@ -25,10 +27,12 @@ class NewEntryCoordinator: Coordinator {
         
         viewController.bindViewModel(to: viewModel)
         router.route(viewController, animated: true)
+        tabBar.isHidden = true
     }
     
     lazy var didTapCloseButton: CocoaAction = CocoaAction { [weak self] in
         self?.router.dismiss(animated: true)
+        self?.tabBar.isHidden = false
         return .empty()
     }
 }

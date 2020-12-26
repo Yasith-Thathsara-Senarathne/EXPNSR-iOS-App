@@ -12,6 +12,12 @@ import Action
 class MonthSelectionCVCell: MNkCVCell_Parameter<MonthModel> {
     private let monthLable = UILabel().chain.textColor(.monthUnselectedTextColor).font(.monthSelectedTitle).textAlignment(.center).component
     
+    var isCellSelected: Bool = false {
+        didSet {
+            checkForSelectedCell(with: isCellSelected)
+        }
+    }
+    
     override func config() {
         backgroundColor = .clear
     }
@@ -22,11 +28,12 @@ class MonthSelectionCVCell: MNkCVCell_Parameter<MonthModel> {
     }
     
     override func updateUI(with data: MonthModel) {
-        let currentMonth: MonthModel = MonthModel(id: Genaric().getCurrentDateAndTime(type: .dateAsId), title: Genaric().getCurrentDateAndTime(type: .yearWithMonth))
-        let isCurrentMonth: Bool = data.id == currentMonth.id
-        let font: UIFont = isCurrentMonth ? .monthSelectedTitle : .monthUnselectedTitle
-        let textColor: UIColor = isCurrentMonth ? .monthSelectedTextColor : .monthUnselectedTextColor
-        let text = data.title
-        monthLable.chain.textColor(textColor).font(font).text(text)
+        monthLable.chain.text(data.title)
+    }
+    
+    private func checkForSelectedCell(with isSelected: Bool) {
+        let font: UIFont = isSelected ? .monthSelectedTitle : .monthUnselectedTitle
+        let textColor: UIColor = isSelected ? .monthSelectedTextColor : .monthUnselectedTextColor
+        monthLable.chain.textColor(textColor).font(font)
     }
 }

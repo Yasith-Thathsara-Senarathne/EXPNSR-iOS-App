@@ -23,4 +23,5 @@ extension UIColor {
     class var doneButtonTitile: UIColor { UIColor.init(named: "doneButtonTitile")! }
     class var monthUnselectedTextColor: UIColor { UIColor.init(named: "monthUnselectedTextColor")! }
     class var monthSelectedTextColor: UIColor { UIColor.init(named: "monthSelectedTextColor")! }
+    class var homeExpenseCellTextColor: UIColor { UIColor.init(named: "homeExpenseCellTextColor")! }
 }

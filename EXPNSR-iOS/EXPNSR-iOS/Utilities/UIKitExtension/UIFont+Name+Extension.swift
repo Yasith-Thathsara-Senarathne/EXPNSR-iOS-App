@@ -28,4 +28,16 @@ extension UIFont {
     class var monthUnselectedTitle: UIFont {
         return AppFont.font(with: .medium, size: 16)
     }
+    
+    class var homeCurrencyTitle: UIFont {
+        return AppFont.font(with: .bold, size: 16)
+    }
+    
+    class var homeMonthlyTotalTitle: UIFont {
+        return AppFont.font(with: .bold, size: 25)
+    }
+    
+    class var homeTotalExpenseValueTitle: UIFont {
+        return AppFont.font(with: .bold, size: 45)
+    }
 }
